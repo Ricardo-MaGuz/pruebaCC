@@ -1,0 +1,54 @@
+article{
+  background: #ffffff;
+  padding: .8rem;
+  margin: 3px 0;
+  box-sizing: border-box;
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  .company{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 35%;
+    align-items: center;
+    align-content: center;
+    background: red;
+    display: flex;
+  }
+  .company-info{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 70px;
+    background: olive;
+    align-items: center;
+  }
+  figure{
+    width: 20%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display:inline-flex;
+    align-self: center;
+    min-width: 40px;
+    align-items: center;
+    min-height: 70px;
+    background: green;
+    img{
+      vertical-align: top;
+      display:flex;
+      align-self: center;
+    }
+  }
+  h4{
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    min-width: 100%;
+  }
+  p{
+    display: block;
+    width: 100%;
+    font-size: .9em;
+  }
+}
+

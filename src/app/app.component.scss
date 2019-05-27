@@ -1,1 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900,900i&display=swap');
+$breakpoint-medium: 720px;
+
+#main-content{
+  margin-left:250px;
+  padding:1rem;
+}
+form {
+  .form-icons {
+    text-align: center;
+    .input-group-label {
+      background-color: #e4e9e5;
+      border-color: #e4e9e5;
+    }
+
+    .input-group-field {
+      border-color: #e4e9e5;
+    }
+
+    .fa {
+      color: white;
+      width: 1rem; // makes the width of icon labels equal
+    }
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  #main-content{
+    margin-left:0px;
+  }
+}

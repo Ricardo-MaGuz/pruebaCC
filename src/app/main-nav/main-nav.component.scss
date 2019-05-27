@@ -1,9 +1,21 @@
+// Mixins
 @mixin border-radius($radius) {
 	border-radius: $radius;
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 }
+@mixin transition($args...) {
+	-webkit-transition: $args;
+    -moz-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
 
+
+// Variables
+$font-stack:    'Roboto', Arial, sans-serif;
+
+// Styles
 #main-menu{
   padding:1rem; 
   img{
@@ -20,7 +32,7 @@
   }
   h1{
     font-weight: 900;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-stack;
     font-size: 1.5rem;
     width:100%;
     text-align: center;
@@ -31,14 +43,28 @@
     width: 100%;
     text-align: center;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-stack;
     font-size: 1rem;
+    margin-bottom: auto;
   }
-  .vertical menu{
+  small{
+    margin-bottom: 3rem;
+  }
+  .menu{
     text-align: left;
-    color:#98a9b1;
+    margin-bottom:3rem;
+    a{
+      color:#98a9b1;
+      @include transition(color .5s ease);
+      &:hover{
+        color:#fff;
+        @include transition(color .5s ease);
+      }
+    }
+      
+    }
+    
   }
-}
 .off-canvas{
   background-color: #233239;
   color:#fff;
