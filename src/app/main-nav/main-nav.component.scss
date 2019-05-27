@@ -11,9 +11,10 @@
     transition: $args;
 }
 
-
 // Variables
 $font-stack:    'Roboto', Arial, sans-serif;
+$breakpoint-medium: 720px;
+
 
 // Styles
 #main-menu{
@@ -68,4 +69,12 @@ $font-stack:    'Roboto', Arial, sans-serif;
 .off-canvas{
   background-color: #233239;
   color:#fff;
+}
+@media (max-width: $breakpoint-medium) {
+  .title-bar{
+    padding-right: 1rem;
+  }
+  .title-bar-title{
+   padding-top: .5rem; 
+  }
 }

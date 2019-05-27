@@ -1,0 +1,66 @@
+// Mixins
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+    -moz-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+// Variables
+$breakpoint-medium-large: 1000px;
+
+#history-nav{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex: wrap;
+  align-items: center;
+  padding-bottom: .3rem;
+  border-bottom: solid medium #eeeff1
+}
+.input-group{
+  display: flex;
+  box-sizing:border-box;
+  flex: 0 50%;
+  margin-bottom: 0px;
+  margin-right: auto;
+  
+}
+#h-alph-nav{
+  display: flex;
+}
+#h-alph-nav a{
+  justify-content: flex-end;
+  color:#b0afaf;
+  padding: 0 .1em;
+  @include transition(color .5s ease);
+  &:hover{
+    color:#314850;
+    @include transition(color .5s ease);
+  }
+}
+#h-alph-nav a span{
+  color:#4d4e50;
+  font-weight: 700;
+}
+@media (max-width: $breakpoint-medium-large) {
+  #history-nav{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .input-group{
+    display: flex;
+    box-sizing:border-box;
+    flex: 1;
+    margin-bottom: 0px;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  #h-alph-nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
