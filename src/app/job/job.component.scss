@@ -1,3 +1,7 @@
+// Variables
+$breakpoint-medium-large: 1000px;
+$breakpoint-mobile: 400px;
+
 article{
   background: #ffffff;
   padding: .8rem;
@@ -6,33 +10,32 @@ article{
   display:flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: space-between;
   .company{
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 35%;
+    width: 40%;
     align-items: center;
     align-content: center;
-    background: red;
     display: flex;
+    align-self: flex-start;
   }
   .company-info{
     width: 70%;
     display: flex;
     flex-wrap: wrap;
     min-height: 70px;
-    background: olive;
     align-items: center;
   }
   figure{
     width: 20%;
-    padding-right: 20px;
+    padding-right: 15px;
     box-sizing: border-box;
     display:inline-flex;
     align-self: center;
     min-width: 40px;
     align-items: center;
     min-height: 70px;
-    background: green;
     img{
       vertical-align: top;
       display:flex;
@@ -40,7 +43,7 @@ article{
     }
   }
   h4{
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 700;
     display: block;
     min-width: 100%;
@@ -48,7 +51,88 @@ article{
   p{
     display: block;
     width: 100%;
+    font-size: .8em;
+  }
+  .job-info{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    div p{
+      font-size: 1.5em;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  h5{
+    color: #999;
     font-size: .9em;
+  }
+  .below-subtitle{
+    margin-top: -20px;
   }
 }
 
+@media (max-width: $breakpoint-medium-large) {
+ article{
+  flex-wrap: wrap;
+  .company{
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .company-info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 70px;
+    align-items: center;
+  }
+  figure{
+    width: 20%;
+    min-width: 40px;
+    margin-bottom: 1rem;
+
+    img{
+      vertical-align: top;
+      display:flex;
+      align-self: center;
+    }
+  }
+  h4{
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    min-width: 100%;
+    text-align: center;
+  }
+  p{
+    text-align: center;
+    font-size: 1em;
+  }
+ }
+ .job-info{
+  flex-wrap: wrap;
+  min-width: 100%;
+  justify-content: space-evenly;
+  div p{
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+  }
+}
+}
+
+@media (max-width: $breakpoint-mobile) {
+.job-info div:last-child,.job-info div:nth-child(3n) {
+  display: none;
+}
+article{
+  background: none;
+  margin-right: 3rem;
+  border-bottom: solid #333 thin;
+  h4{
+    font-size: 1.3rem;
+  }
+}
+
+}

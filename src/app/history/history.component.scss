@@ -9,6 +9,7 @@
 
 // Variables
 $breakpoint-medium-large: 1000px;
+$breakpoint-mobile: 400px;
 
 #history-nav{
   display: flex;
@@ -63,4 +64,18 @@ $breakpoint-medium-large: 1000px;
     width: 100%;
     justify-content: space-around;
   }
+}
+@media (max-width: $breakpoint-mobile) {
+  #h-alph-nav{
+    display: block;
+    width: 30px;
+    position: absolute;
+    top:9rem;
+    right: 1rem;
+  }
+  #h-alph-nav a{
+    display: block;
+    text-align: center;
+  }
+
 }

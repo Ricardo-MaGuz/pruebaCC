@@ -12,6 +12,7 @@
 }
 // Variables
 $breakpoint-medium: 720px;
+$breakpoint-mobile: 400px;
 
 #companies{
   
@@ -130,8 +131,6 @@ $breakpoint-medium: 720px;
           }
         }
         }
-        button{
-        }
     }
     #job-filters{
       width: 100%;
@@ -139,4 +138,13 @@ $breakpoint-medium: 720px;
     }
   }
 
+}
+
+@media (max-width: $breakpoint-mobile) {
+.success{
+  display: none;
+}
+#companies{
+  display: none;
+}
 }
